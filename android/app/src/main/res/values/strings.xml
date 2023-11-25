@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Student_Manager_Mobile_App</string>
+    <string name="title_activity_main">Student_Manager_Mobile_App</string>
+    <string name="package_name">com.isge.app</string>
+    <string name="custom_url_scheme">com.isge.app</string>
+</resources>
