@@ -12,12 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AddStudentPage implements OnInit {
   title = 'New Student';
-  btnTitle = 'Add student';
+  btnTitle = "Ajouter l'étudiant";
 
   studentForm = this.fb.group({
     studentName: ['', [Validators.required]],
     studentLevel: ['', [Validators.required]],
-    studentAge: [0, [Validators.required, Validators.min(10)]],
+    studentAge: [0,[Validators.required, Validators.min(10)]],
   });
 
   constructor(

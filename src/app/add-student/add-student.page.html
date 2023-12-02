@@ -1,32 +1,46 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>{{ title }}</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content class="ion-padding" [fullscreen]="true">
-  <ion-card>
-    <ion-card-content>
-      <form [formGroup]="studentForm">
-        <ion-list>
-          <ion-item>
-            <!-- <ion-label>Name</ion-label> -->
-            <ion-input label="Name" labelPlacement="floating" type="text" formControlName="studentName"></ion-input>
-          </ion-item>
-          <ion-item>
-            <!-- <ion-label>Level</ion-label> -->
-            <ion-input label="Level" labelPlacement="floating" type="text" formControlName="studentLevel"></ion-input>
-          </ion-item>
-          <ion-item>
-            <!-- <ion-label>Age</ion-label> -->
-            <ion-input label="Age" labelPlacement="floating" type="number" formControlName="studentAge"></ion-input>
-          </ion-item>
-        </ion-list>
-      </form>
-    </ion-card-content>
-    <ion-button (click)="addStudent()" expand="block">{{ btnTitle }}</ion-button>
-  </ion-card>
+<ion-content>
+  <div class="header">
+    <ion-buttons slot="start">
+    <ion-button routerLink="/home">
+      <ion-icon slot="icon-only" color="light" name="arrow-back-outline"></ion-icon>
+    </ion-button>    
+    </ion-buttons>
+  </div>
+
+  <!-- detail de l'étudiant -->
+  <div class="card">
+    <div class="image">
+      <ion-img src="/assets/icon/user.png"> </ion-img>
+    </div>
+    <div class="card-content">
+      <div class="card-title">
+        <h1 class="ion-no-margin">Créer un étudiant</h1>
+      </div>
+    </div>
+    <ion-card>
+      <ion-card-content>
+        
+        <form [formGroup]="studentForm">
+          <ion-list>
+            <ion-item>
+              <!-- <ion-label>Name</ion-label> -->
+              <ion-input label="Name" labelPlacement="fixed" placeholder="Nom" type="text" formControlName="studentName"></ion-input>
+            </ion-item>
+            <ion-item>
+              <!-- <ion-label>Level</ion-label> -->
+              <ion-input label="Level" labelPlacement="fixed" placeholder="Classe" type="text" formControlName="studentLevel"></ion-input>
+            </ion-item>
+            <ion-item>
+              <!-- <ion-label>Age</ion-label> -->
+              <ion-input label="Age" labelPlacement="fixed" placeholder="Entrer votre âge" type="number" formControlName="studentAge"></ion-input>
+            </ion-item>
+          </ion-list>
+        </form>
+        
+      </ion-card-content>
+      <ion-button (click)="addStudent()" expand="block"> {{ btnTitle }}</ion-button>
+    </ion-card>
+
+  </div>
 </ion-content>
