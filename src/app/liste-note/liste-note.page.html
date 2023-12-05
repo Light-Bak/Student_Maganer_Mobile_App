@@ -1,11 +1,77 @@
-<ion-item >
-  
-  <div class="item-note" item-end>
-    <button ion-button clear >
-      <ion-icon name="create"></ion-icon>
-    </button>
-    <button ion-button clear >
-      <ion-icon name="trash"></ion-icon>
-    </button>
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="chevron-back" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+
+    <ion-card class="ion-margin-bottom">
+      <ion-img src="/assets/icon/resultat.png"></ion-img>
+    </ion-card>
+
+
+
+    
+    <ion-item lines="none">
+      <ion-label>
+        <h5>Mathématques:</h5>
+      </ion-label>
+      <ion-label>
+        <h5>18</h5>
+      </ion-label>
+      <ion-icon name="create-outline" slot="end"></ion-icon>
+      <ion-icon name="trash-outline" slot="end"></ion-icon>
+    </ion-item>
+    <br>
+
+    <ion-item lines="none">
+      <ion-label>
+        <h5>Physiques:</h5>
+      </ion-label>
+      <ion-label>
+        <h5>18</h5>
+      </ion-label>
+      <ion-icon name="create-outline" slot="end"></ion-icon>
+      <ion-icon name="trash-outline" slot="end"></ion-icon>
+    </ion-item>
+<br>
+
+    <ion-item lines="none">
+      <ion-label>
+        <h5>Francais:</h5>
+      </ion-label>
+      <ion-label>
+        <h5>18</h5>
+      </ion-label>
+      <ion-icon name="create-outline" slot="end"></ion-icon>
+      <ion-icon name="trash-outline" slot="end"></ion-icon>
+    </ion-item>
+    <br>
+
+    <ion-item lines="none">
+      <ion-label>
+        <h5>Anglais:</h5>
+      </ion-label>
+      <ion-label>
+        <h5>18</h5>
+      </ion-label>
+      <ion-icon name="create-outline" slot="end"></ion-icon>
+      <ion-icon name="trash-outline" slot="end"></ion-icon>
+    </ion-item>
+
+    <br>
+    
+    
   </div>
-</ion-item>
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
+    <ion-fab-button >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  
+</ion-content>
