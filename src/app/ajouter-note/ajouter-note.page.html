@@ -1,0 +1,51 @@
+
+<ion-content>
+    <div class="header">
+      <ion-buttons slot="start">
+      <ion-button routerLink="/ajouter-note">
+        <ion-icon slot="icon-only" color="light" name="arrow-back-outline"></ion-icon>
+      </ion-button>    
+      </ion-buttons>
+    </div>
+  
+    <!-- detail de l'étudiant -->
+    <div class="card">
+      <div class="image">
+        <ion-img src="/assets/icon/note.png"> </ion-img>
+      </div>
+      <div class="card-content">
+        <div class="card-title">
+          <h2 class="ion-no-margin">informations à remplir</h2>
+        </div>
+      </div>
+      <ion-card>
+        <ion-card-content>
+          
+          <form >
+            <ion-list>
+              <ion-item>
+                <!-- <ion-label>Name</ion-label> -->
+                <ion-input label="matière" labelPlacement="fixed" placeholder="matière" type="text" ></ion-input>
+              </ion-item>
+              <ion-item>
+                <!-- <ion-label>Level</ion-label> -->
+                <ion-input label="semestre" labelPlacement="fixed" placeholder="semestre" type="text" ></ion-input>
+              </ion-item>
+              <ion-item>
+                <!-- <ion-label>Age</ion-label> -->
+                <ion-input label="note" labelPlacement="fixed" placeholder="note" type="number" ></ion-input>
+              </ion-item>
+              <ion-item>
+                <!-- <ion-label>Age</ion-label> -->
+                <ion-input label="coefficiant" labelPlacement="fixed" placeholder="coefficiant" type="number" ></ion-input>
+              </ion-item>
+            </ion-list>
+          </form>
+          
+        </ion-card-content>
+        <ion-button (click)="addStudent()" expand="block"> {{ btnTitle }}</ion-button>
+      </ion-card>
+  
+    </div>
+  </ion-content>
+  

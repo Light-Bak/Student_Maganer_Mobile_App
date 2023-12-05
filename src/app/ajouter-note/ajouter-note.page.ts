@@ -5,29 +5,26 @@ import { Student } from '../student.model';
 import { NavController } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
 
-
 @Component({
-  selector: 'app-liste-note',
-  templateUrl: './liste-note.page.html',
-  styleUrls: ['./liste-note.page.scss'],
+  selector: 'app-ajouter-note',
+  templateUrl: './ajouter-note.page.html',
+  styleUrls: ['./ajouter-note.page.scss'],
 })
-export class ListeNotePage implements OnInit {
-
+export class AjouterNotePage implements OnInit {
   title = 'New Student';
-  btnTitle = "Ajouter l'étudiant";
+  btnTitle = "Ajouter la note";
 
   studentForm = this.fb.group({
     studentName: ['', [Validators.required]],
     studentLevel: ['', [Validators.required]],
     studentAge: [0,[Validators.required, Validators.min(10)]],
   });
-
   constructor(
     private fb: FormBuilder,
     private studentService: StudentService,
     private navCtrl: NavController,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id');
@@ -39,9 +36,7 @@ export class ListeNotePage implements OnInit {
 
     const localStudent = this.studentService.getOne(+id);
     this.studentForm.patchValue({...localStudent});
-
   }
-
   addStudent() {
     if(this.studentForm.valid) {
       const newStudent: Student = {
@@ -55,6 +50,5 @@ export class ListeNotePage implements OnInit {
       this.navCtrl.navigateRoot('/home');
     }
   }
-
 
 }
