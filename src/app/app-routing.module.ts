@@ -26,6 +26,10 @@ const routes: Routes = [
     path: 'ajouter-note',
     loadChildren: () => import('./ajouter-note/ajouter-note.module').then( m => m.AjouterNotePageModule)
   },
+  {
+    path: 'home-acc',
+    loadChildren: () => import('./home-acc/home-acc.module').then( m => m.HomeAccPageModule)
+  },
 
 ];
 @NgModule({

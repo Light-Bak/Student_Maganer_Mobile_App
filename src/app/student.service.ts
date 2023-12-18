@@ -24,7 +24,14 @@ export class StudentService {
       studentName: 'Jhon Sere',
       studentLevel: 'IC2',
       studentAge: 22
+    },
+    {
+      id: 3,
+      studentName: 'Jhon Sere',
+      studentLevel: 'IC2',
+      studentAge: 22
     }
+    
   ]
 
   constructor() { }

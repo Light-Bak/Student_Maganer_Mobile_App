@@ -1,23 +1,63 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-item lines="none">
+   <ion-button fill="clear" slot="start" color="light">
+     <ion-icon slot="icon-only" name="menu"></ion-icon>
+   </ion-button>
+    <ion-avatar slot="end">
+      <img src="/assets/icon/prof.png" />
+    </ion-avatar>
+  </ion-item>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item [routerLink]="['/add-student', student.id]" *ngFor="let student of students">
-      <ion-label>
-        <h2>ID: {{ student.id }}</h2>
-        <h2>Name: {{ student.studentName }}</h2>
-        <h2>Age: {{ student.studentAge }}</h2>
-        <h2>Level: {{ student.studentLevel }}</h2>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+<ion-content [fullscreen]="true" color="light">
+  <div class="main-header"></div>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-label>
+          <ion-note color="light" class="ion-margin-start">
+            Welcome
+          </ion-note>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <div class="search ion-padding">
+          <ion-item lines="none">
+            <ion-input placeholder="Chercher un étudiant"></ion-input>
+            <ion-icon name="search-outline" slot="start"></ion-icon>
+          </ion-item>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-margin-horizontal">
+      <ion-col *ngFor="let student of students">
+        <ion-card>
+          <ion-card-header>
+            <div align="center">
+              <ion-thumbnail >
+                <img src="/assets/icon/user.png" />
+              </ion-thumbnail>
+            </div>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label color="dark">{{ student.studentName }}</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
 
   <ion-fab slot="fixed" horizontal="end" vertical="bottom">
-    <ion-fab-button (click)="navToStudent()">
+    <ion-fab-button style="--background: #177EA9;" (click)="navToStudent()">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
